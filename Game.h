@@ -23,6 +23,7 @@ class Game
 {
 private:
 	high_resolution_clock::time_point startTime;
+	high_resolution_clock::time_point pausedTime;
 	bool stop = false;
 	bool gameStarted = false;
 	bool tab = false;
@@ -47,6 +48,7 @@ private:
 	vector<pair<float, float>> randCarrotsXY;
 	vector<int> indexToDelete;
 	duration<double> time_span = duration<double>(0.0);
+	duration<double> time_span_pause = duration<double>(0.0);
 	float addedTimeForCollision = 0;
 	vector<double> bestResults;
 	double lastResult = 0.00;
