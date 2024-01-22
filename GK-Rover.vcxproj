@@ -160,6 +160,7 @@
   <ItemGroup>
     <ClCompile Include="Collisions.cpp" />
     <ClCompile Include="Dach.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Kierunkowskaz.cpp" />
     <ClCompile Include="Korpus.cpp" />
     <ClCompile Include="Lacznik.cpp" />
@@ -178,6 +179,7 @@
   <ItemGroup>
     <ClInclude Include="Collisions.h" />
     <ClInclude Include="Dach.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Kierunkowskaz.h" />
     <ClInclude Include="Korpus.h" />
     <ClInclude Include="Lacznik.h" />

@@ -17,7 +17,8 @@
 class Robot
 {
 public:
-	Robot(float rotationAngle, float x, float y, float z);
+	//Robot(float rotationAngle, float x, float y, float z);
+	Robot();
 	void draw();
 	float x, y, z, rotationAngle, inclinationDegree;
 	bool isA, isD;

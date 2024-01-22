@@ -1,10 +1,20 @@
 #include "Robot.h"
 
-Robot::Robot(float rotationAngle, float x, float y, float z) {
-    this->x = x;
-    this->y = y;
-    this->z = z;
-    this->rotationAngle = rotationAngle;
+//Robot::Robot(float rotationAngle, float x, float y, float z) {
+//    this->x = x;
+//    this->y = y;
+//    this->z = z;
+//    this->rotationAngle = rotationAngle;
+//    isA = false;
+//    isD = false;
+//    inclinationDegree = 0.0f;
+//}
+
+Robot::Robot() {
+    x = 0.0f;
+    y = 0.0f;
+    z = 0.5f;
+    rotationAngle = 0.0f;
     isA = false;
     isD = false;
     inclinationDegree = 0.0f;
