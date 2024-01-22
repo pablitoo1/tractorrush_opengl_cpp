@@ -388,7 +388,7 @@ void Game::idle()
             if (speedRoverForward >= max_speed_forward && robot.inclinationDegree > -8.0f) {
                 robot.inclinationDegree -= 0.25f;
             }
-            else if (robot.inclinationDegree > 0.0f) {
+            else if (robot.inclinationDegree < 0.0f) {
                 robot.inclinationDegree += 0.25f;
             }
         }
