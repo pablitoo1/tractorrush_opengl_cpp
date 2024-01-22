@@ -137,13 +137,13 @@ void Game::keyboardCallback(unsigned char key, int x, int y)
         if (gameStarted) {
             stop = !stop;
 
-            /*if (stop) {
-                pausedTime = high_resolution_clock::now();
+            if (stop) {
+                pauseStart = high_resolution_clock::now();
             }
             else {
-                high_resolution_clock::time_point currentTimePause = high_resolution_clock::now();
-                time_span_pause = duration_cast<duration<double>>(currentTimePause - pausedTime);
-            }*/
+                pauseEnd = high_resolution_clock::now();
+                time_span_pause += duration_cast<duration<double>>(pauseEnd - pauseStart);
+            }
         }
         break;
     case 13:    //ENTER
@@ -267,9 +267,11 @@ void Game::idle()
     if (stop || !gameStarted) {
         return;
     }
-
+        
     high_resolution_clock::time_point currentTime = high_resolution_clock::now();
-    time_span = duration_cast<duration<double>>(currentTime - startTime - time_span_pause);
+    time_span = duration_cast<duration<double>>(currentTime - startTime);
+
+    time_span = duration_cast<duration<double>>(time_span - time_span_pause);
 
     if (tempRand == 0) {
         randomCarrotsXYGenerate();

@@ -23,7 +23,8 @@ class Game
 {
 private:
 	high_resolution_clock::time_point startTime;
-	high_resolution_clock::time_point pausedTime;
+	high_resolution_clock::time_point pauseStart;
+	high_resolution_clock::time_point pauseEnd;
 	bool stop = false;
 	bool gameStarted = false;
 	bool tab = false;
